@@ -23,6 +23,7 @@
 #define AGG2D_INCLUDED
 
 // With this define uncommented you can use FreeType font engine
+//#define USING_FONT_ENGINE
 #define AGG2D_USE_FREETYPE
 
 // JME
@@ -50,10 +51,14 @@
 #include "agg_rounded_rect.h"
 #include "agg_font_cache_manager.h"
 
-#ifdef AGG2D_USE_FREETYPE
-#include "agg_font_freetype.h"
-#else
-#include "agg_font_win32_tt.h"
+#ifdef USING_FONT_ENGINE
+
+	#ifdef AGG2D_USE_FREETYPE
+		#include "agg_font_freetype.h"
+	#else
+		#include "agg_font_win32_tt.h"
+	#endif
+
 #endif
 
 #include "agg_pixfmt_rgba.h"
@@ -97,14 +102,18 @@ class Agg2D
     typedef agg::span_gradient<ColorType, agg::span_interpolator_linear<>, agg::gradient_x,      GradientArray> LinearGradientSpan;
     typedef agg::span_gradient<ColorType, agg::span_interpolator_linear<>, agg::gradient_circle, GradientArray> RadialGradientSpan;
 
-#ifdef AGG2D_USE_FREETYPE
-    typedef agg::font_engine_freetype_int32       FontEngine;
-#else
-    typedef agg::font_engine_win32_tt_int32       FontEngine;
+#ifdef USING_FONT_ENGINE
+
+	#ifdef AGG2D_USE_FREETYPE
+		typedef agg::font_engine_freetype_int32       FontEngine;
+	#else
+		typedef agg::font_engine_win32_tt_int32       FontEngine;
+	#endif
+		typedef agg::font_cache_manager<FontEngine>   FontCacheManager;
+		typedef FontCacheManager::gray8_adaptor_type  FontRasterizer;
+		typedef FontCacheManager::gray8_scanline_type FontScanline;
+
 #endif
-    typedef agg::font_cache_manager<FontEngine>   FontCacheManager;
-    typedef FontCacheManager::gray8_adaptor_type  FontRasterizer;
-    typedef FontCacheManager::gray8_scanline_type FontScanline;
 
     typedef agg::conv_curve<agg::path_storage>    ConvCurve;
     typedef agg::conv_stroke<ConvCurve>           ConvStroke;
@@ -376,6 +385,7 @@ public:
 
     // Text
     //-----------------------
+#ifdef USING_FONT_ENGINE
     void   flipText(bool flip);
     void   font(const char* fileName, double height,
                 bool bold = false,
@@ -388,6 +398,9 @@ public:
     void   textHints(bool hints);
     double textWidth(const char* str);
     void   text(double x, double y, const char* str, bool roundOff=false, double dx=0.0, double dy=0.0);
+
+#endif
+
 
     // Path commands
     //-----------------------
@@ -503,7 +516,10 @@ public:
 
 private:
     void render(bool fillColor);
+
+#ifdef USING_FONT_ENGINE
     void render(FontRasterizer& ras, FontScanline& sl);
+#endif
 
     void addLine(double x1, double y1, double x2, double y2);
     void updateRasterizerGamma();
@@ -585,8 +601,12 @@ private:
 #ifndef AGG2D_USE_FREETYPE
     HDC                             m_fontDC;
 #endif
+
+#ifdef USING_FONT_ENGINE
     FontEngine                      m_fontEngine;
     FontCacheManager                m_fontCacheManager;
+#endif
+
 };
 
 
