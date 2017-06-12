@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\agg_2.5">
+      <UniqueIdentifier>{399b7edd-1e9c-41ca-8619-745fdaa2b880}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\agg_2.5\src">
+      <UniqueIdentifier>{41b9b4b4-69e0-47d8-8f09-4c716e663ca9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\agg_2.5\agg2d.cpp">
+      <Filter>Source Files\agg_2.5</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\RGBImage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\BasicTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\agg_2.5\src\agg_arc.cpp">
+      <Filter>Source Files\agg_2.5\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\agg_2.5\src\agg_arrowhead.cpp">
+      <Filter>Source Files\agg_2.5\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\agg_2.5\src\agg_bezier_arc.cpp">
+      <Filter>Source Files\agg_2.5\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\agg_2.5\src\agg_bspline.cpp">
+      <Filter>Source Files\agg_2.5\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\agg_2.5\src\agg_curves.cpp">
+      <Filter>Source Files\agg_2.5\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\agg_2.5\src\agg_embedded_raster_fonts.cpp">
+      <Filter>Source Files\agg_2.5\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\agg_2.5\src\agg_gsv_text.cpp">
+      <Filter>Source Files\agg_2.5\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\agg_2.5\src\agg_image_filters.cpp">
+      <Filter>Source Files\agg_2.5\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\agg_2.5\src\agg_line_aa_basics.cpp">
+      <Filter>Source Files\agg_2.5\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\agg_2.5\src\agg_line_profile_aa.cpp">
+      <Filter>Source Files\agg_2.5\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\agg_2.5\src\agg_rounded_rect.cpp">
+      <Filter>Source Files\agg_2.5\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\agg_2.5\src\agg_sqrt_tables.cpp">
+      <Filter>Source Files\agg_2.5\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\agg_2.5\src\agg_trans_affine.cpp">
+      <Filter>Source Files\agg_2.5\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\agg_2.5\src\agg_trans_double_path.cpp">
+      <Filter>Source Files\agg_2.5\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\agg_2.5\src\agg_trans_single_path.cpp">
+      <Filter>Source Files\agg_2.5\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\agg_2.5\src\agg_trans_warp_magnifier.cpp">
+      <Filter>Source Files\agg_2.5\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\agg_2.5\src\agg_vcgen_bspline.cpp">
+      <Filter>Source Files\agg_2.5\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\agg_2.5\src\agg_vcgen_contour.cpp">
+      <Filter>Source Files\agg_2.5\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\agg_2.5\src\agg_vcgen_dash.cpp">
+      <Filter>Source Files\agg_2.5\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\agg_2.5\src\agg_vcgen_markers_term.cpp">
+      <Filter>Source Files\agg_2.5\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\agg_2.5\src\agg_vcgen_smooth_poly1.cpp">
+      <Filter>Source Files\agg_2.5\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\agg_2.5\src\agg_vcgen_stroke.cpp">
+      <Filter>Source Files\agg_2.5\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\agg_2.5\src\agg_vpgen_clip_polygon.cpp">
+      <Filter>Source Files\agg_2.5\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\agg_2.5\src\agg_vpgen_clip_polyline.cpp">
+      <Filter>Source Files\agg_2.5\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\agg_2.5\src\agg_vpgen_segmentator.cpp">
+      <Filter>Source Files\agg_2.5\src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\agg_2.5\agg2d.h">
+      <Filter>Source Files\agg_2.5</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\Typedef.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\RGBImage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\BasicTest.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

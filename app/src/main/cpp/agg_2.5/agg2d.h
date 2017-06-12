@@ -51,7 +51,7 @@
 #include "agg_rounded_rect.h"
 #include "agg_font_cache_manager.h"
 
-#ifdef USING_FONT_ENGINE
+#ifdef USING_FONT_ENGINE	
 
 	#ifdef AGG2D_USE_FREETYPE
 		#include "agg_font_freetype.h"
