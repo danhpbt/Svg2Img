@@ -17,7 +17,41 @@ add_library( # Sets the name of the library.
              SHARED
 
              # Provides a relative path to your source file(s).
-             src/main/cpp/native-lib.cpp )
+             src/main/cpp/native-lib.cpp
+             src/main/cpp/agg_2.5/agg2d.cpp
+             src/main/cpp/agg_2.5/src/agg_embedded_raster_fonts.cpp
+             src/main/cpp/agg_2.5/src/agg_gsv_text.cpp
+             src/main/cpp/agg_2.5/src/agg_curves.cpp
+             src/main/cpp/agg_2.5/src/agg_bezier_arc.cpp
+             src/main/cpp/agg_2.5/src/agg_sqrt_tables.cpp
+             src/main/cpp/agg_2.5/src/agg_trans_double_path.cpp
+             src/main/cpp/agg_2.5/src/agg_bspline.cpp
+             src/main/cpp/agg_2.5/src/agg_vcgen_dash.cpp
+             src/main/cpp/agg_2.5/src/agg_vcgen_smooth_poly1.cpp
+             src/main/cpp/agg_2.5/src/agg_vcgen_stroke.cpp
+             src/main/cpp/agg_2.5/src/agg_vcgen_bspline.cpp
+             src/main/cpp/agg_2.5/src/agg_trans_single_path.cpp
+             src/main/cpp/agg_2.5/src/agg_trans_affine.cpp
+             src/main/cpp/agg_2.5/src/agg_rounded_rect.cpp
+             src/main/cpp/agg_2.5/src/agg_vcgen_contour.cpp
+             src/main/cpp/agg_2.5/src/agg_vpgen_clip_polygon.cpp
+             #src/main/cpp/agg_2.5/src/agg_line_profile_aa.cpp
+             src/main/cpp/agg_2.5/src/agg_arrowhead.cpp
+             src/main/cpp/agg_2.5/src/agg_image_filters.cpp
+             src/main/cpp/agg_2.5/src/agg_vcgen_markers_term.cpp
+             src/main/cpp/agg_2.5/src/agg_arc.cpp
+             src/main/cpp/agg_2.5/src/agg_line_aa_basics.cpp
+             src/main/cpp/agg_2.5/src/agg_vpgen_clip_polyline.cpp
+             src/main/cpp/agg_2.5/src/agg_trans_warp_magnifier.cpp
+             src/main/cpp/agg_2.5/src/agg_vpgen_segmentator.cpp
+             )
+
+include_directories(
+                    #src/main/cpp/freetype/inc
+                    src/main/cpp/agg_2.5
+                    src/main/cpp/agg_2.5/include
+                    #src/main/cpp/agg_2.5/font_freetype
+                   )
 
 # Searches for a specified prebuilt library and stores the path as a
 # variable. Because CMake includes system libraries in the search path by
