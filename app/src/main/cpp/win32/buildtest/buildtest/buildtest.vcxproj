@@ -45,8 +45,8 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>D:\MyProjects\Research\Svg2Img\app\src\main\cpp;D:\MyProjects\Research\Svg2Img\app\src\main\cpp\freetype\inc\freetype\internal\services;D:\MyProjects\Research\Svg2Img\app\src\main\cpp\freetype\inc\freetype\internal;D:\MyProjects\Research\Svg2Img\app\src\main\cpp\freetype\inc\freetype\config;D:\MyProjects\Research\Svg2Img\app\src\main\cpp\freetype\inc;D:\MyProjects\Research\Svg2Img\app\src\main\cpp\agg_2.5\font_freetype;D:\MyProjects\Research\Svg2Img\app\src\main\cpp\agg_2.5\include;D:\MyProjects\Research\Svg2Img\app\src\main\cpp\agg_2.5;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>FT2_BUILD_LIBRARY;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\MyProjects\Research\Svg2Img\app\src\main\cpp\expat;D:\MyProjects\Research\Svg2Img\app\src\main\cpp\agg_svg;D:\MyProjects\Research\Svg2Img\app\src\main\cpp;D:\MyProjects\Research\Svg2Img\app\src\main\cpp\freetype\inc\freetype\internal\services;D:\MyProjects\Research\Svg2Img\app\src\main\cpp\freetype\inc\freetype\internal;D:\MyProjects\Research\Svg2Img\app\src\main\cpp\freetype\inc\freetype\config;D:\MyProjects\Research\Svg2Img\app\src\main\cpp\freetype\inc;D:\MyProjects\Research\Svg2Img\app\src\main\cpp\agg_2.5\font_freetype;D:\MyProjects\Research\Svg2Img\app\src\main\cpp\agg_2.5\include;D:\MyProjects\Research\Svg2Img\app\src\main\cpp\agg_2.5;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
     </ClCompile>
     <Link>
@@ -94,8 +94,16 @@
     <ClCompile Include="..\..\..\agg_2.5\src\agg_vpgen_clip_polygon.cpp" />
     <ClCompile Include="..\..\..\agg_2.5\src\agg_vpgen_clip_polyline.cpp" />
     <ClCompile Include="..\..\..\agg_2.5\src\agg_vpgen_segmentator.cpp" />
+    <ClCompile Include="..\..\..\agg_svg\agg_svg_parser.cpp" />
+    <ClCompile Include="..\..\..\agg_svg\agg_svg_path_renderer.cpp" />
+    <ClCompile Include="..\..\..\agg_svg\agg_svg_path_tokenizer.cpp" />
     <ClCompile Include="..\..\..\common\BasicTest.cpp" />
     <ClCompile Include="..\..\..\common\RGBImage.cpp" />
+    <ClCompile Include="..\..\..\expat\xmlparse.c" />
+    <ClCompile Include="..\..\..\expat\xmlrole.c" />
+    <ClCompile Include="..\..\..\expat\xmltok.c" />
+    <ClCompile Include="..\..\..\expat\xmltok_impl.c" />
+    <ClCompile Include="..\..\..\expat\xmltok_ns.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\agg_2.5\agg2d.h" />

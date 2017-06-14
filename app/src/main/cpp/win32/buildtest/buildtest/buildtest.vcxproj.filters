@@ -19,6 +19,12 @@
     <Filter Include="Source Files\agg_2.5\src">
       <UniqueIdentifier>{41b9b4b4-69e0-47d8-8f09-4c716e663ca9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\agg_svg">
+      <UniqueIdentifier>{8d65aaee-5ea8-49fe-9ad8-97d159e7dd28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\expat">
+      <UniqueIdentifier>{0f495d78-41fa-4166-b28d-c61982fb667e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\agg_2.5\agg2d.cpp">
@@ -104,6 +110,30 @@
     </ClCompile>
     <ClCompile Include="..\..\..\agg_2.5\src\agg_vpgen_segmentator.cpp">
       <Filter>Source Files\agg_2.5\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\agg_svg\agg_svg_parser.cpp">
+      <Filter>Source Files\agg_svg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\agg_svg\agg_svg_path_renderer.cpp">
+      <Filter>Source Files\agg_svg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\agg_svg\agg_svg_path_tokenizer.cpp">
+      <Filter>Source Files\agg_svg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\expat\xmlparse.c">
+      <Filter>Source Files\expat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\expat\xmlrole.c">
+      <Filter>Source Files\expat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\expat\xmltok.c">
+      <Filter>Source Files\expat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\expat\xmltok_impl.c">
+      <Filter>Source Files\expat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\expat\xmltok_ns.c">
+      <Filter>Source Files\expat</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
