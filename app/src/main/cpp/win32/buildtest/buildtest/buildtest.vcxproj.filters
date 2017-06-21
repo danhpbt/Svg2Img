@@ -25,6 +25,9 @@
     <Filter Include="Source Files\expat">
       <UniqueIdentifier>{0f495d78-41fa-4166-b28d-c61982fb667e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\agg_2.5\font_freetype">
+      <UniqueIdentifier>{8b2500b2-73dd-4bf6-b210-b9c1f3ae6c74}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\agg_2.5\agg2d.cpp">
@@ -111,15 +114,6 @@
     <ClCompile Include="..\..\..\agg_2.5\src\agg_vpgen_segmentator.cpp">
       <Filter>Source Files\agg_2.5\src</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\agg_svg\agg_svg_parser.cpp">
-      <Filter>Source Files\agg_svg</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\agg_svg\agg_svg_path_renderer.cpp">
-      <Filter>Source Files\agg_svg</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\agg_svg\agg_svg_path_tokenizer.cpp">
-      <Filter>Source Files\agg_svg</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\expat\xmlparse.c">
       <Filter>Source Files\expat</Filter>
     </ClCompile>
@@ -134,6 +128,9 @@
     </ClCompile>
     <ClCompile Include="..\..\..\expat\xmltok_ns.c">
       <Filter>Source Files\expat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\agg_2.5\font_freetype\agg_font_freetype.cpp">
+      <Filter>Source Files\agg_2.5\font_freetype</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

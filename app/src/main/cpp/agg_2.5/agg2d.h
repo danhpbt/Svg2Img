@@ -23,7 +23,7 @@
 #define AGG2D_INCLUDED
 
 // With this define uncommented you can use FreeType font engine
-//#define USING_FONT_ENGINE
+#define USING_FONT_ENGINE
 #define AGG2D_USE_FREETYPE
 
 // JME

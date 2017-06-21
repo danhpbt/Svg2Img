@@ -45,13 +45,19 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>D:\MyProjects\Research\Svg2Img\app\src\main\cpp\expat;D:\MyProjects\Research\Svg2Img\app\src\main\cpp\agg_svg;D:\MyProjects\Research\Svg2Img\app\src\main\cpp;D:\MyProjects\Research\Svg2Img\app\src\main\cpp\freetype\inc\freetype\internal\services;D:\MyProjects\Research\Svg2Img\app\src\main\cpp\freetype\inc\freetype\internal;D:\MyProjects\Research\Svg2Img\app\src\main\cpp\freetype\inc\freetype\config;D:\MyProjects\Research\Svg2Img\app\src\main\cpp\freetype\inc;D:\MyProjects\Research\Svg2Img\app\src\main\cpp\agg_2.5\font_freetype;D:\MyProjects\Research\Svg2Img\app\src\main\cpp\agg_2.5\include;D:\MyProjects\Research\Svg2Img\app\src\main\cpp\agg_2.5;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\MyProjects\Research\Svg2Img\app\src\main\cpp\expat;D:\MyProjects\Research\Svg2Img\app\src\main\cpp\agg_svg;D:\MyProjects\Research\Svg2Img\app\src\main\cpp;D:\MyProjects\Research\Svg2Img\app\src\main\cpp\freetype2\include;D:\MyProjects\Research\Svg2Img\app\src\main\cpp\agg_2.5\font_freetype;D:\MyProjects\Research\Svg2Img\app\src\main\cpp\agg_2.5\include;D:\MyProjects\Research\Svg2Img\app\src\main\cpp\agg_2.5;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <Lib>
+      <AdditionalDependencies>freetype28d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Lib>
+      <AdditionalLibraryDirectories>D:\MyProjects\Research\Svg2Img\app\src\main\cpp\freetype2;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -69,6 +75,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\agg_2.5\agg2d.cpp" />
+    <ClCompile Include="..\..\..\agg_2.5\font_freetype\agg_font_freetype.cpp" />
     <ClCompile Include="..\..\..\agg_2.5\src\agg_arc.cpp" />
     <ClCompile Include="..\..\..\agg_2.5\src\agg_arrowhead.cpp" />
     <ClCompile Include="..\..\..\agg_2.5\src\agg_bezier_arc.cpp" />
@@ -94,9 +101,6 @@
     <ClCompile Include="..\..\..\agg_2.5\src\agg_vpgen_clip_polygon.cpp" />
     <ClCompile Include="..\..\..\agg_2.5\src\agg_vpgen_clip_polyline.cpp" />
     <ClCompile Include="..\..\..\agg_2.5\src\agg_vpgen_segmentator.cpp" />
-    <ClCompile Include="..\..\..\agg_svg\agg_svg_parser.cpp" />
-    <ClCompile Include="..\..\..\agg_svg\agg_svg_path_renderer.cpp" />
-    <ClCompile Include="..\..\..\agg_svg\agg_svg_path_tokenizer.cpp" />
     <ClCompile Include="..\..\..\common\BasicTest.cpp" />
     <ClCompile Include="..\..\..\common\RGBImage.cpp" />
     <ClCompile Include="..\..\..\expat\xmlparse.c" />
