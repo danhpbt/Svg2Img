@@ -8,6 +8,7 @@ import android.widget.TextView;
 public class ActivityMain extends AppCompatActivity {
 
     SvgView svgView;
+    byte[] fontData;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +26,8 @@ public class ActivityMain extends AppCompatActivity {
 
 
         svgView = (SvgView) findViewById(R.id.svgview);
+
+        fontData  = com.xynotec.util.Util.loadResAssets(this, "timesi.ttf");
     }
 
     /**
