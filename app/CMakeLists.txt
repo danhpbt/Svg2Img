@@ -44,13 +44,16 @@ add_library( # Sets the name of the library.
              src/main/cpp/agg_2.5/src/agg_vpgen_clip_polyline.cpp
              src/main/cpp/agg_2.5/src/agg_trans_warp_magnifier.cpp
              src/main/cpp/agg_2.5/src/agg_vpgen_segmentator.cpp
+
+             src/main/cpp/agg_2.5/font_freetype/agg_font_freetype.cpp
              )
 
 include_directories(
-                    #src/main/cpp/freetype/inc
                     src/main/cpp/agg_2.5
                     src/main/cpp/agg_2.5/include
-                    #src/main/cpp/agg_2.5/font_freetype
+                    src/main/cpp/agg_2.5/font_freetype
+                    src/main/cpp/freetype2/include
+                    src/main/cpp/freetype2/include/freetype
                    )
 
 # Searches for a specified prebuilt library and stores the path as a
@@ -70,9 +73,15 @@ find_library( # Sets the name of the path variable.
 # can link multiple libraries, such as libraries you define in this
 # build script, prebuilt third-party libraries, or system libraries.
 
-target_link_libraries( # Specifies the target library.
-                       native-lib
 
-                       # Links the target library to the log library
-                       # included in the NDK.
-                       ${log-lib} )
+target_link_libraries( # Specifies the target library.
+                   native-lib
+                   freetype-lib
+                   # Links the target library to the log library
+                   # included in the NDK.
+                   #${freetype-lib)
+                   ${log-lib})
+
+add_library(freetype-lib SHARED IMPORTED )
+#set_target_properties(freetype-lib PROPERTIES IMPORTED_LOCATION "../freetype/build/intermediates/bundles/debug/jni/${ANDROID_ABI}/libfreetype-lib.so")
+set_target_properties(freetype-lib PROPERTIES IMPORTED_LOCATION d://MyProjects/Research/Svg2Img/freetype/build/intermediates/bundles/debug/jni/${ANDROID_ABI}/libfreetype-lib.so)
