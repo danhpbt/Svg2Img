@@ -211,7 +211,7 @@ void Agg2DTest(BMP_ARGB *data, int width, int height)
 
 	// Outlined Text
 #ifdef AGG2D_USE_FREETYPE
-	g->font("c:/WINDOWS/fonts/timesi.ttf", 50.0, false, false, Agg2D::VectorFontCache);
+	g->font("c:/WINDOWS/fonts/times.ttf", 50.0, false, false, Agg2D::VectorFontCache);
 #else
 	g->font("Times New Roman", 50.0, false, false, Agg2D::VectorFontCache);
 #endif
@@ -245,7 +245,7 @@ void Agg2DTest(BMP_ARGB *data, int width, int height)
 	g->noLine();
 	//g->textHints(false);
 #ifdef AGG2D_USE_FREETYPE
-	g->font("c:/WINDOWS/fonts/timesi.ttf", 40.0, false, false, Agg2D::VectorFontCache);
+	g->font("c:/WINDOWS/fonts/times.ttf", 40.0, false, false, Agg2D::VectorFontCache);
 #else
 	g->font("Times New Roman", 40.0, false, false, Agg2D::VectorFontCache);
 #endif
