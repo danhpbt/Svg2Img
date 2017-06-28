@@ -56,7 +56,6 @@ public class SvgView extends View {
         int width = bmpBuffer.getWidth();
         int height = bmpBuffer.getHeight();
         int[] data = new int[width * height];
-        //bmpBuffer.getPixels(data, 0, width, 0, 0, width, height);
 
         testAgg2D(data, width, height);
 

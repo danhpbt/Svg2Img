@@ -6,6 +6,8 @@
 
 #define BYTES_PER_PIXEL 4
 
+//static AAssetManager* gAssetManger = NULL;
+
 extern "C"
 {
 JNIEXPORT jstring JNICALL
@@ -17,12 +19,19 @@ Java_com_xynotec_svg2img_ActivityMain_stringFromJNI(
 }
 
 JNIEXPORT void JNICALL
-Java_com_xynotec_svg2img_SvgView_testAgg2D(JNIEnv* env, jobject thizz, jintArray intData, int width, int height) {
+Java_com_xynotec_svg2img_MainApplication_loadAssetManger(JNIEnv *env, jobject obj, jobject assetManager)
+{
+    gAssetManger = AAssetManager_fromJava(env, assetManager);
+}
 
+JNIEXPORT void JNICALL
+Java_com_xynotec_svg2img_SvgView_testAgg2D(JNIEnv* env, jobject thizz, jintArray intData, int width, int height)
+{
     LOGI("Width...............: %d", width);
     LOGI("Height..............: %d", height);
 
     jint *data = env->GetIntArrayElements(intData, NULL);
+    //jbyte *fontData = env->GetByteArrayElements(fontMemory, NULL);
 
     Agg2D *agg2D = new Agg2D();
     agg2D->attach((unsigned char *) data, width, height, width * BYTES_PER_PIXEL);
@@ -216,6 +225,7 @@ Java_com_xynotec_svg2img_SvgView_testAgg2D(JNIEnv* env, jobject thizz, jintArray
 
     // Reglar Text
 #ifdef AGG2D_USE_FREETYPE
+     //agg2D->fontMemory((char*)fontData, fontMemSize);
      agg2D->font("timesi.ttf", 14.0, false, false);
 #else
      agg2D->font("Times New Roman", 14.0, false, false);

@@ -111,8 +111,10 @@ typedef struct tag_FloatRectangle
 #else
 	#define EXPORT_DLL	
 
-	#define  LOG_TAG    "libgl2jni"
-	#define  LOGI(...)  __android_log_print(ANDROID_LOG_INFO,LOG_TAG,__VA_ARGS__)
+	#define  LOG_TAG    "Agg2Djni"
+	#define LOGI(...) __android_log_print(ANDROID_LOG_INFO,LOG_TAG,__VA_ARGS__)
+	#define LOGW(...) __android_log_print(ANDROID_LOG_WARN,LOG_TAG,__VA_ARGS__)
+	#define LOGE(...) __android_log_print(ANDROID_LOG_ERROR,LOG_TAG,__VA_ARGS__)
 
 #endif
 
